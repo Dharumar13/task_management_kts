@@ -17,14 +17,12 @@ Widget mobilePortraitView(BuildContext context) {
     color: ColorResource.colorWhite,
     child: Stack(
       children: [
-// Background Image
         Container(
           height: MediaQuery.of(context).size.height / 2.0,
           width: MediaQuery.of(context).size.width,
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(ImageResource.signBg),
-              // Replace with your asset image path
               fit: BoxFit.fill,
             ),
           ),
@@ -39,7 +37,6 @@ Widget mobilePortraitView(BuildContext context) {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-
                     Container(
                       height:139,
                       width: 172,
@@ -139,8 +136,6 @@ Widget mobilePortraitView(BuildContext context) {
                 .text
                 .trim()));
   }
-
-                       // context.goNamed(RouterNames.mainRouter);
                       },
                       height: 50,
                       minWidth: 183,
@@ -209,7 +204,6 @@ Widget mobilePortraitView(BuildContext context) {
             ),
           ),
         )
-// Main Content
       ],
     ),
   );
@@ -222,7 +216,6 @@ Widget mobileLandscapeView(BuildContext context) {
     child: SingleChildScrollView(
       child: Stack(
         children: [
-// Background Image
           Container(
             height: MediaQuery.of(context).size.height / 2.0,
             width: MediaQuery.of(context).size.width,
@@ -343,7 +336,6 @@ Widget mobileLandscapeView(BuildContext context) {
                                           .trim()));
                             }
 
-                            // context.goNamed(RouterNames.mainRouter);
                           },
                           height: 50,
                           minWidth: 183,
@@ -415,7 +407,6 @@ Widget mobileLandscapeView(BuildContext context) {
               ),
             ),
           )
-// Main Content
         ],
       ),
     ),
@@ -569,7 +560,6 @@ Widget tabletPortraitView(BuildContext context) {
                                           .trim()));
                             }
 
-                            // context.goNamed(RouterNames.mainRouter);
                           },
                           height: 50,
                           minWidth: 183,
@@ -636,7 +626,6 @@ Widget tabletPortraitView(BuildContext context) {
               ),
             ),
           )
-// Main Content
         ],
       ),
     ),
@@ -798,7 +787,6 @@ Widget tabletLandscapeView(BuildContext context) {
                           },
                           child: CustomText(
                             StringResource.forgotPassword,
-
                             style: GoogleFonts.inter(
                                 color: ColorResource.color1E2027,
                                 fontSize:FontSize1.fifteen,
@@ -815,7 +803,6 @@ Widget tabletLandscapeView(BuildContext context) {
                             children: [
                               CustomText(
                                 StringResource.or,
-
                                 style: GoogleFonts.inter(
                                     color: ColorResource.color1E2027,
                                     fontSize:FontSize1.fifteen,

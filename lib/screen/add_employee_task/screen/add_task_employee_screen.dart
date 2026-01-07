@@ -135,48 +135,7 @@ class _AddTaskEmployeeScreenState extends State<AddTaskEmployeeScreen> {
                                               fontWeight: FontWeight.w700),
                                         ),
                                       ),
-                                    //  const Spacer(),
-                               /*       Container(
-                                        height:AppUtils.getDeviceType()=="tablet"? 30:22,
-                                        width:45,
-                                        decoration: BoxDecoration(
-                                            border: Border.all(
-                                                width: 1.0,
-                                                color: ColorResource.color003867),
-                                            borderRadius:
-                                            BorderRadius.all(Radius.circular(AppUtils.getDeviceType()=="tablet"?6.0:6.0)),
-                                            color: ColorResource.color8AC7FF),
-                                        child: Center(
-                                          child: CustomText(
-                                            "${context.read<AddLayoutMemberBloc>().addLayoutMembersModel?.data?.duration}",
-                                            style: GoogleFonts.inter(
-                                                color: ColorResource.color003867,
-                                                fontSize: AppUtils.getDeviceType()=="tablet"?FontSize1.fourteen:FontSize1.twelve,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        ),
-                                      ),
-                                      const SizedBox(width: 17),
-                                      Container(
-                                        height:AppUtils.getDeviceType()=="tablet"? 30:22,
-                                        width:45,
-                                        decoration: BoxDecoration(
-                                            border: Border.all(
-                                                width: 1.0,
-                                                color: ColorResource.color5F5F5F),
-                                            borderRadius:
-                                            BorderRadius.all(Radius.circular(AppUtils.getDeviceType()=="tablet"?6.0:6.0)),
-                                            color: ColorResource.colorCCCCCC),
-                                        child: Center(
-                                          child: CustomText(
-                                            "${context.read<AddLayoutMemberBloc>().addLayoutMembersModel?.data!.day?.toUpperCase()}",
-                                            style: GoogleFonts.inter(
-                                                color: ColorResource.color5A5C60,
-                                            fontSize: AppUtils.getDeviceType()=="tablet"?FontSize1.fourteen:FontSize1.twelve,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        ),
-                                      ),*/
+
                                     ],
                                   ),
                                 ),

@@ -141,7 +141,6 @@ class _AuditFormScreenState extends State<AuditFormScreen> {
                                   child: CustomText(
                                     "${context.read<AuditFormBloc>().auditFormModel?.data?.layoutName}",
                                     isSingleLine: true,
-                                    //"DOG FOOD - WET",
                                     style: GoogleFonts.inter(
                                         color: ColorResource.color12151C,
                                         fontSize:
@@ -412,7 +411,6 @@ class _AuditFormScreenState extends State<AuditFormScreen> {
                                                     ),
                                                   );
                                                 } else {
-                                                  // If the current index is within the range of imageFileList list
                                                   final imageFileIndex = indexCombined - (context.read<AuditFormBloc>().auditFormModel?.data?.questions![index].images?.length ?? 0);
                                                   final imageFile = context.read<AuditFormBloc>().auditFormModel?.data?.questions![index].imageFileList?[imageFileIndex];
                                                   if (imageFile != null) {
@@ -463,8 +461,6 @@ class _AuditFormScreenState extends State<AuditFormScreen> {
                                               },
                                             ),
                                           ):const SizedBox()
-
-
                                         ],
                                       ),
                                     ),
@@ -508,7 +504,6 @@ class _AuditFormScreenState extends State<AuditFormScreen> {
                                               .size
                                               .width /
                                               2.5,
-                                          // margin: const EdgeInsets.only(top: 55),
                                           decoration: BoxDecoration(
                                               borderRadius:
                                               const BorderRadius
@@ -559,17 +554,13 @@ class _AuditFormScreenState extends State<AuditFormScreen> {
                                             }else{
                                               image=item.imageFileList!.isEmpty?"false":"true";
                                             }
-
-
                                           }
-
                                           if(values == "false"){
                                             break;
                                           }
                                           if(image=="false"){
                                             break;
                                           }
-
                                         }
                                         if (values == "true" && image=="true") {
                                                 final hasPermission =
@@ -585,11 +576,7 @@ class _AuditFormScreenState extends State<AuditFormScreen> {
                                                 }
                                               } else {
                                           alertSheetAllField(message: "All fields are required.", context: context,);
-
-                                        }
-
-
-                                      },
+                                        }},
                                       child: Padding(
                                         padding:
                                         const EdgeInsets.only(
@@ -602,7 +589,6 @@ class _AuditFormScreenState extends State<AuditFormScreen> {
                                               .size
                                               .width /
                                               2.5,
-                                          // margin: const EdgeInsets.only(top: 55),
                                           decoration: BoxDecoration(
                                               borderRadius:
                                               const BorderRadius
@@ -654,7 +640,6 @@ class _AuditFormScreenState extends State<AuditFormScreen> {
                                           .size
                                           .width /
                                           2.5,
-                                      // margin: const EdgeInsets.only(top: 55),
                                       decoration: BoxDecoration(
                                           borderRadius:
                                           const BorderRadius
@@ -694,7 +679,6 @@ class _AuditFormScreenState extends State<AuditFormScreen> {
                               : Center(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
-
                               children: [
                                 if(context.read<AuditFormBloc>().isSubmit==false)
                                   Row(
@@ -727,7 +711,6 @@ class _AuditFormScreenState extends State<AuditFormScreen> {
                                                 .size
                                                 .width /
                                                 2.5,
-                                            // margin: const EdgeInsets.only(top: 55),
                                             decoration: BoxDecoration(
                                                 borderRadius:
                                                 const BorderRadius
@@ -770,7 +753,6 @@ class _AuditFormScreenState extends State<AuditFormScreen> {
 
                                           for (var item in result!) {
                                             values = item.ansReqired == "0" ? "true" : "false";
-
                                             if(item.imgUpload==1){
                                               if(item.images!.isNotEmpty){
                                                 image=item.images!.isEmpty?"false":"true";
@@ -778,7 +760,6 @@ class _AuditFormScreenState extends State<AuditFormScreen> {
                                                 image=item.imageFileList!.isEmpty?"false":"true";
                                               }
                                             }
-
                                             if(values == "false"){
                                               break;
                                             }
@@ -814,7 +795,6 @@ class _AuditFormScreenState extends State<AuditFormScreen> {
                                               .size
                                               .width /
                                               2.5,
-                                          // margin: const EdgeInsets.only(top: 55),
                                           decoration: BoxDecoration(
                                               borderRadius:
                                               const BorderRadius
@@ -975,10 +955,4 @@ class _AuditFormScreenState extends State<AuditFormScreen> {
       )),
     );
   }
- /* Future<void> _getImage() async {
-    final pickedFile = await ImagePicker().pickImage(source: ImageSource.gallery);
-
-  }*/
-
-
 }

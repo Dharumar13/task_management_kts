@@ -153,39 +153,28 @@ checkPrivacyStatus(context);
                                     context.read<JobBoardBloc>().selectedDay,
                                     day);
                               },
-
                               availableGestures: AvailableGestures.none,
                               calendarStyle: CalendarStyle(
-                                //  cellPadding: EdgeInsets.only(top: 20),
-                               /* defaultDecoration: BoxDecoration(
-                                  color: Colors.red, // Change the color of the default day decoration
-                                  shape: BoxShape.circle,
-                                ),*/
                                 selectedDecoration: const BoxDecoration(
                                   color: ColorResource.color003867,
-                                  // Change the color of the selected day
                                   shape: BoxShape.circle,
                                 ),
                                 todayDecoration: BoxDecoration(
-                                  //  color: ColorResource.color02CA79,
                                   border: Border.all(
                                       width: 2.0,
                                       color: ColorResource.color02CA79),
-                                  // Change the color of the focused day
                                   shape: BoxShape.circle,
                                 ),
                                 todayTextStyle: GoogleFonts.inter(
                                   fontSize: AppUtils.getDeviceType() == "tablet"
                                       ? FontSize1.fifteen
                                       : FontSize1.thirteen,
-                                  // Change the font size of the day
                                   fontWeight: FontWeight.w400,
                                 ),
                                 weekendTextStyle: GoogleFonts.inter(
                                   fontSize: AppUtils.getDeviceType() == "tablet"
                                       ? FontSize1.fifteen
                                       : FontSize1.thirteen,
-                                  // Change the font size of the day
                                   fontWeight: FontWeight.w400,
                                 ),
                               ),
@@ -381,8 +370,7 @@ checkPrivacyStatus(context);
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-
-                                 Column(
+                                Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -524,7 +512,6 @@ checkPrivacyStatus(context);
 
                                                         ),
 
-
                                                         child: Center(
                                                           child: Padding(
                                                             padding: const EdgeInsets.only(left: 6.0,right: 6.0),
@@ -555,7 +542,6 @@ checkPrivacyStatus(context);
                                                             color:ColorResource.color008B55
 
                                                         ),
-
 
                                                         child: Center(
                                                           child: Padding(
@@ -675,10 +661,7 @@ checkPrivacyStatus(context);
             ),
           ),
         );
-
-
-
-      },
+        },
       listener: (BuildContext context, state)  {
         if (state is JobBoardException) {
           AppUtils.showInternetDialog(context, onPressed: () {

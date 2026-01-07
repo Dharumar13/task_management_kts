@@ -10,10 +10,8 @@ import '../../../widgets/custom_text.dart';
 import '../bloc/job_board_bloc.dart';
 
 
-
 showPrivacyPolicyDialog(BuildContext context) {
   final exampleCubit = context.read<JobBoardBloc>();
-
   return showDialog(
     context: context,
     barrierDismissible: false,

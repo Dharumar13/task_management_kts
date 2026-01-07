@@ -27,9 +27,6 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
   AppUtils.getDeviceType();
     super.initState();
   }
-
-
-
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<MyProfileBloc,MyProfileState>(builder: (context,state){
@@ -76,21 +73,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                     ],
                   ),
                 ),
-              /*  actions: [
-                  Align(
-                    alignment: Alignment.bottomRight,
-                    child: IconButton(
-                      icon: const Icon(
-                        Icons.person,
-                        color: Colors.black,
-                        size: 35,
-                      ),
-                      onPressed: () {
-                        // Add your logic for handling the person icon press
-                      },
-                    ),
-                  ),
-                ],*/
+
               ),
             ),
             body: Container(
@@ -228,13 +211,6 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                               GestureDetector(
                                 onTap: (){
                                   deleteAlertSheet(context: context);
-                                  /*AppUtils. showCustomDialog(context,onPressed: ()async{
-                                    if(context.mounted){
-                                      context.read<MyProfileBloc>().add(const DeleteAccountEvent());
-                                      context.pop();
-
-                                    }
-                                  },data: "Are you sure you want to delete account?",title: "Delete Account");*/
                                 },
                                 child: Container(
                                   height: 75,
@@ -270,7 +246,6 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
                                 child: GestureDetector(
                                   onTap: (){
                                     logoutAlertSheet(context: context);
-                                  //  context.pop();
 
                                   },
                                   child: Container(

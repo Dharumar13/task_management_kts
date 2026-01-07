@@ -90,12 +90,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       }
 
       if(state is RegistrationLoaded){
-       // context.pushNamed(RouterNames.loginRouter);
         context.pushReplacementNamed(RouterNames.registerSuccessScreenRouter);
         context.read<RegistrationBloc>().fullNameController.clear();
         context.read<RegistrationBloc>().emailController.clear();
         context.read<RegistrationBloc>().mobileController.clear();
-        //AppUtils.showToast(context.read<RegistrationBloc>().registrationModel!.message.toString());
       }
     });
   }

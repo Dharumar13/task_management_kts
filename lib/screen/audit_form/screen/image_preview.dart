@@ -24,7 +24,6 @@ class ImagePreviewScreen extends StatefulWidget {
 }
 
 class _ImagePreviewScreenState extends State<ImagePreviewScreen> {
-  // List<Photo> photoList;
   int? index;
   int? imageId;
 
@@ -140,7 +139,6 @@ class _ImagePreviewScreenState extends State<ImagePreviewScreen> {
       },
       onPageChanged: (index) {
         _currentIndex = index;
-        //imageId = widget.imageList!.data!.images![index].id;
       },
     );
   }
@@ -188,24 +186,3 @@ class _ImagePreviewScreenState extends State<ImagePreviewScreen> {
 
 }
 
-
-/* context.read<ImageBloc>().add(DeleteImage(imageId));
-                            Navigator.of(context, rootNavigator: true).pop('dialog');*//*
-
-                          },
-                          data:
-                          "Are you sure you want to delete?");
-                        // context.read<ImageBloc>().add(DeleteImage(imageId));
-                      },
-                      child: const Icon(
-                        Icons.delete,
-                        color: ColorResource.cancel,
-                      ))),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-*/

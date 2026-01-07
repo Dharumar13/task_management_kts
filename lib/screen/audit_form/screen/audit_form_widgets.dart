@@ -314,7 +314,6 @@ class AlertSheet extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 10.0,right: 10.0),
                       child: MaterialButton(onPressed: (){
-                        //context.read<AllLayoutsBloc>().add(SaveCommentLayout());
                         context.pop();
                       },
                         minWidth: isPortrait==true?MediaQuery.of(context).size.width/3:MediaQuery.of(context).size.width/6,
@@ -372,7 +371,6 @@ class CustomDialog extends StatelessWidget {
         builder: (context, state) {
           return SafeArea(
             child: Wrap(
-            //  crossAxisAlignment:WrapCrossAlignment.center,
               alignment: WrapAlignment.center,
               children: <Widget>[
                 Padding(

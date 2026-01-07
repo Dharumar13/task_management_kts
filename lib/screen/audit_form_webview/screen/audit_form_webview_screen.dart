@@ -33,8 +33,6 @@ class _AuditFormWebViewScreenState extends State<AuditFormWebViewScreen> {
   @override
   void initState() {
     url = widget.taskUrl!;
-
-    // #docregion platform_features
     late final PlatformWebViewControllerCreationParams params;
     if (WebViewPlatform.instance is WebKitWebViewPlatform) {
       params = WebKitWebViewControllerCreationParams(
@@ -47,11 +45,7 @@ class _AuditFormWebViewScreenState extends State<AuditFormWebViewScreen> {
 
       );
     }
-
-
     final WebViewController controller = WebViewController.fromPlatformCreationParams(params);
-    // #enddocregion platform_features
-
     if (Platform.isAndroid) {
       final myAndroidController = controller.platform as webview_flutter_android.AndroidWebViewController;
       myAndroidController.setOnShowFileSelector(_androidFilePicker);
@@ -164,7 +158,6 @@ class _AuditFormWebViewScreenState extends State<AuditFormWebViewScreen> {
                   highlightColor: Colors.transparent,
                   onPressed: () {
                     Navigator.pop(context, true);
-                    //  context.pushReplacementNamed(RouterNames.jobBoardRouter);
                   },
                 ),
                 Padding(
@@ -275,7 +268,6 @@ Navigator.pop(context,true);
 
 
   Future<List<String>> _androidFilePicker(webview_flutter_android.FileSelectorParams params) async {
-    // Show the bottom sheet to let the user choose between camera or file picker
     final choice = await showModalBottomSheet<String>(
       context: context,
       backgroundColor: ColorResource.colorWhite,
@@ -336,7 +328,6 @@ Navigator.pop(context,true);
       if (result != null) {
         String filePath = result.files.single.path!;
         String fileName = result.files.single.name;
-
         // Convert the file to base64
         List<int> fileBytes = await File(filePath).readAsBytes();
 

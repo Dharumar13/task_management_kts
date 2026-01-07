@@ -173,7 +173,6 @@ Widget mobileLandscape(BuildContext context){
     color: ColorResource.colorWhite,
     child: Stack(
       children: [
-        // Background Image
         Container(
           height: MediaQuery.of(context).size.height / 2.0,
           width: MediaQuery.of(context).size.width,
@@ -341,7 +340,6 @@ Widget tabletPortrait(BuildContext context){
       color: ColorResource.colorWhite,
       child: Stack(
         children: [
-          // Background Image
           Container(
             height: MediaQuery.of(context).size.height / 2.0,
             width: MediaQuery.of(context).size.width,

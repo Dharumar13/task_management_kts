@@ -147,7 +147,6 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                                         padding: const EdgeInsets.only(left: 10.0,right: 10.0),
                                         child: GestureDetector(
                                           onTap: (){
-                                            //print(context.read<LayoutListBloc>().isDescending!);
                                             if(context.read<LayoutListBloc>().isDescending! == true){
                                               context.read<LayoutListBloc>().add(SelectedIndexEvent(selectedList,  false, "asc", widget.siteId!));
                                             }else{
@@ -224,16 +223,10 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                                       fontSize: AppUtils.getDeviceType()=="tablet"?FontSize1.fifteen: FontSize1.thirteen,
                                       fontWeight: FontWeight.w500,
                                     ),
-                                    //  autofocus: enable,
-                                    //  focusNode: inputNode,
-                                    //  controller: context.read<UserListBloc>().searchController,
                                     textInputAction: TextInputAction.done,
                                     onChanged: (searchText) {
                                       context.read<LayoutListBloc>().add(GetLayoutList(widget.date!, widget.siteId!));
-                                      //addSearchedFOrItemsToSearchedList(searchText,context.read<LayoutListBloc>().layoutListModel!);
-
-
-                                    },
+                                      },
                                     decoration: InputDecoration(
                                       labelStyle: GoogleFonts.inter(
                                         color: ColorResource.color5A5C60,
@@ -270,7 +263,6 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
 
                         const SizedBox(height:40.0),
                         if (state is LayoutListLoaded)
-                          //context.read<LayoutListBloc>().searchController.text.isEmpty?
                         Expanded(
                           child: ListView.builder(
                             itemCount:context.read<LayoutListBloc>().layoutListModel?.data?.length,
@@ -294,7 +286,6 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                                           width:AppUtils.getDeviceType()=="tablet"?null:MediaQuery.sizeOf(context).width/2.5,
                                           child: CustomText(
                                             "${context.read<LayoutListBloc>().layoutListModel?.data![index].layoutName}",
-                                            //"DOG FOOD - WET",
                                             style: GoogleFonts.inter(
                                                 color: ColorResource.color747474,
                                                 fontSize:AppUtils.getDeviceType()=="tablet"?FontSize1.fifteen: FontSize1.thirteen,
@@ -435,10 +426,8 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                 (Set<WidgetState> states) {
 
               if (states.contains(WidgetState.selected)) {
-                // Color for the selected (active) radio button
                 return ColorResource.color003867; // Change this to your desired color
               }
-              // Color for the unselected (inactive) radio button
               return ColorResource.color003867; // Change this to your desired color
             },
           ),

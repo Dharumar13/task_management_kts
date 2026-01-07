@@ -22,8 +22,6 @@ class Font {
   final String _fontName;
 
   String get value => _fontName;
-
-  // ignore: sort_constructors_first
   const Font(this._fontName);
 }
 

@@ -206,9 +206,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   if (state is ForgotLoading)
                     SizedBox(
                         height: MediaQuery.of(context).size.height / 1,
-                        child: AppUtils().buildLoading()),
-
-                ],
+                        child: AppUtils().buildLoading()),],
               ),
             ),
           ) : Container(
