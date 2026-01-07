@@ -14,8 +14,8 @@ android {
         applicationId = "com.fortigrid.pact.task"
         minSdk = 26
         targetSdk = 36
-        versionCode = 50
-        versionName = "5.0.3"
+        versionCode = 9
+        versionName = "1.1.2"
     }
 
     compileOptions {

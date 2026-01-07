@@ -55,21 +55,7 @@ class _CustomTextState extends State<CustomText> {
       overflow: widget.isSingleLine ? TextOverflow.ellipsis : null,
       maxLines: widget.maxLines,
       style: widget.style ??
-         /* TextStyle(
-            decoration: widget.isUnderLine
-                ? TextDecoration.underline
-                : TextDecoration.none,
-            color: widget.color,
-            fontFamily:"Segoe UI",
-            fontSize: widget.fontSize,
-           // height:1.2,
 
-            height: widget.lineHeight,
-            fontStyle: widget.fontStyle,
-            fontWeight: widget.fontWeight,
-
-            // overflow: TextOverflow.ellipsis
-          ),*/
           GoogleFonts.inter(
             decoration: widget.isUnderLine
                 ? TextDecoration.underline

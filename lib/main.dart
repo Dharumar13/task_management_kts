@@ -7,7 +7,6 @@ import 'package:permission_handler/permission_handler.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   checkPermissions();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,
     DeviceOrientation.landscapeLeft,DeviceOrientation.landscapeRight]).then((_) {
@@ -32,9 +31,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return FlutterSizer(
       builder: (context, orientation, screenType) {
-
-
-     return MaterialApp.router(
+        return MaterialApp.router(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(
