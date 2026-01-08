@@ -6,13 +6,10 @@ import '../app_utility/singleton.dart';
 
 class HttpServices {
   static final HttpServices _instance = HttpServices._internal();
-
-
-
   factory HttpServices() => _instance;
   late Dio dio;
- // static String baseURL = "https://central.dev.apptra.com.au/api/pact/task_v2/";
-  static String baseURL = "https://central.apptra.com.au/api/pact/task_v2/";
+  static String baseURL = "https://central.dev.apptra.com.au/api/pact/task_v2/";
+ // static String baseURL = "https://central.apptra.com.au/api/pact/task_v2/";
 
   HttpServices._internal()  {
     BaseOptions options = BaseOptions(
@@ -68,14 +65,13 @@ class HttpServices {
       await dio.post(path, data:data, onReceiveProgress: (int sentBytes, int totalBytes) {
         double progressPercent = sentBytes / totalBytes * 100;
         if (progressPercent == 100) {
-
         }
       },
         onSendProgress: (int sentBytes, int totalBytes) async{
-
-          double progressPercent = sentBytes / totalBytes * 100;
-          Singleton().percentage=progressPercent.toInt();
+        double progressPercent = sentBytes / totalBytes * 100;
+        Singleton().percentage=progressPercent.toInt();
           if (progressPercent == 100) {
+
           }
         },);
       return response.data;
